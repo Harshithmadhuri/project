@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/Darshancr9/K8S-assignment-1.git'
+                git branch: 'main', url: 'https://github.com/Harshithmadhuri/project.git'
             }
         }
 
