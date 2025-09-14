@@ -30,7 +30,7 @@ pipeline {
 
         stage('Deploy to Kubernetes') {
             steps {
-                withCredentials([file(credentialsId: 'kubeconfig-id', variable: 'KUBECONFIG')]) {
+                withEnv(["KUBECONFIG=/var/lib/jenkins/.kube/config"]) {
                     sh 'kubectl apply -f .'
                 } // closes withEnv
             } // closes stage
